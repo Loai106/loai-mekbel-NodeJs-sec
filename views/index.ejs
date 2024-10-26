@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs')%>
+
+
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+
+            <h2>Files</h2>
+            <ul class="file-list">
+                <% if(names.length>0){ %>
+                    <%names.forEach(name=>{%>
+                        <li class="list-item">
+                            <%=name.name%>
+
+                                <a href="/files/<%=name.base%>"><button type="button">open</button></a>
+                                <form action="/delete/<%= name.base %>" method="POST" style="display:inline;">
+                                    <button type="submit">Delete</button>
+                                </form>
+                                <button id="btn-<%=name.base%>" onClick="renameToggle('<%=name.base%>')">rename</button>
+                                <form id="rename-form-<%=name.base%>" action="/rename/<%= name.base %>" method="POST"
+                                    style="display:none;">
+                                    <input type="text" name="name" placeholder="Enter new name">
+                                    <button type="submit">submit</button>
+                                </form>
+                        </li>
+                        <%})%>
+                            <%}%>
+            </ul>
+
+            <script>
+                function renameToggle(fileName) {
+                    const form = document.getElementById(`rename-form-${fileName}`);
+                    const btn = document.getElementById(`btn-${fileName}`);
+
+                    if (form.style.display === "none" || form.style.display === "") {
+                        form.style.display = "inline";
+                        btn.textContent = "X"
+
+                    }
+                    else {
+                        form.style.display = "none";
+                        btn.textContent = "rename"
+
+
+                    }
+                }
+            </script>
+    </body>
+
+</html>

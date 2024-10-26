@@ -1,0 +1,220 @@
+body {
+    max-width: 1200px;
+    margin: 20px auto;
+    pad: 0 20px;
+}
+
+p,
+h1,
+h2,
+h3,
+a,
+ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/*navbar styling*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    /* Consistent color with button styling */
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+    /* Match hover color with button hover */
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+}
+
+/*form style*/
+.create-file {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-file h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.create-file label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.create-file input[type="text"],
+.create-file textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.create-file textarea {
+    min-height: 100px;
+}
+
+.create-file button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.create-file button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/*home page*/
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.file-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.list-item:hover {
+    background-color: #f1f1f1;
+}
+
+.list-item input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    /* Adjust as needed */
+}
+
+.list-item button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.list-item button:hover {
+    opacity: 0.8;
+}
+
+.list-item button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.list-item button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.list-item a button {
+    background-color: #007BFF;
+    color: white;
+    margin-left: 5px;
+}
+
+.list-item a button:hover {
+    background-color: #0056b3;
+}
+
+.list-item form {
+    display: inline;
+    /* Keep forms inline */
+}
